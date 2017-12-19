@@ -11,7 +11,7 @@ def model_finder(path, type_=1):
 		file_ = files[-1]
 	else:
 		# TODO: need to change the url based on the type of experiment
-		url = 'http://ccvl.stat.ucla.edu/ccvl/init_models/vgg16_20M.caffemodel'
+		url = 'http://www.cs.jhu.edu/~alanlab/ccvl/init_models/vgg16_128.caffemodel'
 		print 'Downloading init caffemodel from ' + url
 		filename = wget.download(url)
 		file_ = path + '/init.caffemodel'
@@ -37,7 +37,7 @@ def environment_variable_creator(dic):
 
 def mkdir():
 	CAFFE_DIR='./'
-	CAFFE_BIN='.build_release/tools/caffe.bin'
+	CAFFE_BIN='build/tools/caffe'
 
 	CONFIG_DIR=os.environ['EXP'] + '/config/' + os.environ['NET_ID']
 	MODEL_DIR=os.environ['EXP'] + '/model/' + os.environ['NET_ID']

@@ -27,7 +27,7 @@ layers {
     root_folder: "${DATA_ROOT}"
     source: "${EXP}/list/${TRAIN_SET}.txt"
     label_type: PIXEL
-    batch_size: 30
+    batch_size: 10
     shuffle: true
   }
   transform_param {

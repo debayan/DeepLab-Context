@@ -2,7 +2,7 @@ project( CaffeSrc )
 
 
 add_subdirectory(proto)
-
+include_directories(/media/remote_home/va03/matio-1.5.11/src /media/remote_home/va03/matio-1.5.11/src/.libs)
 #    Recursively find source files
 ##    test sources
 file(GLOB_RECURSE TEST_CPP_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/test_*.cpp)
@@ -30,7 +30,7 @@ if(NOT CPU_ONLY)
     )
 endif()
 
-target_link_libraries(caffe proto
+target_link_libraries(caffe proto matio
         ${BLAS_LIBRARIES}
         ${Boost_LIBRARIES}
         ${GFLAGS_LIBRARIES}
